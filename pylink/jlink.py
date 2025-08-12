@@ -2163,8 +2163,8 @@ class JLink(object):
             pass
 
         res = self._dll.JLINK_EraseChip()
-        #if res < 0:
-        #    raise errors.JLinkEraseException(res)
+        if res < 0:
+            raise errors.JLinkEraseException(res)
 
         return res
 
